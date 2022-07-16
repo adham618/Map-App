@@ -303,3 +303,10 @@ header nav button img {
     padding: 1rem 0;
   }
 }
+@media screen and (max-width: 991px) {
+  header nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+}
