@@ -77,7 +77,7 @@ h6 {
 }
 .container {
   margin: 0 auto;
-  max-width: 76rem;
+  max-width: 70rem;
   width: 90%;
 }
 /* header */
@@ -139,10 +139,14 @@ header nav div.range {
   transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out,
     transform 0.1s ease-in-out;
   box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.15);
-  -webkit-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
-  -moz-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
-  -ms-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
-  -o-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  -webkit-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out,
+    transform 0.1s ease-in-out;
+  -moz-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out,
+    transform 0.1s ease-in-out;
+  -ms-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out,
+    transform 0.1s ease-in-out;
+  -o-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out,
+    transform 0.1s ease-in-out;
   -webkit-border-radius: 1.2em;
   -moz-border-radius: 1.2em;
   -ms-border-radius: 1.2em;
@@ -207,27 +211,33 @@ header nav button {
 header nav button img {
   margin-right: 0.5rem;
 }
-.map-section {
-  padding-bottom: 2rem;
-}
 .map-section .container {
+  width: 100%;
+  max-width: 100%;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 8fr 3fr;
 }
 .map-section .container .map {
   width: 100%;
+  height: 765px;
 }
 .map-section .container .map img {
   max-width: 100%;
   min-height: 100%;
   width: 100%;
+  max-height: 100%;
 }
 .map-section .container .menu {
+  width: 100%;
+  max-width: 30rem;
   padding: 1rem;
+  overflow-y: auto;
+  max-height: 100%;
+  height: 774px;
 }
 .map-section .container .menu form select {
   width: 100%;
-  max-width: 22rem;
+  max-width: 25rem;
   margin-bottom: 1rem;
   background: #e6f2ff;
   border-radius: 3px;
@@ -265,12 +275,13 @@ header nav button img {
   gap: 1rem;
 }
 .map-section .container .menu form .btn-group button {
-  font-size: 11px;
+  font-size: 12px;
+  width: 6.5rem;
   color: #fff;
   background-color: #d9d9d9;
   border: none;
   cursor: pointer;
-  padding: 0.4rem;
+  padding: 0.4rem 0;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -279,31 +290,32 @@ header nav button img {
 }
 .map-section .container .menu .btn-group {
   width: 100%;
-  max-width: 22rem;
+  max-width: 25rem;
   display: flex;
   justify-content: space-between;
 }
 .map-section .container .menu .btn-group {
   width: 100%;
-  max-width: 22rem;
+  max-width: 25rem;
   display: flex;
   justify-content: space-between;
-}
-.map-section .container .menu .btn-group .first {
-  width: 5.5rem;
 }
 @media screen and (max-width: 991px) {
   .map-section .container {
     grid-template-columns: 1fr;
   }
   .map-section .container .menu {
-    padding: 1rem 0;
+    padding: 1rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   header nav {
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem 0;
+  }
+  .map-section .container .map {
+    width: 100%;
+    height: unset;
   }
 }
