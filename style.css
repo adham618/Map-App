@@ -1,0 +1,300 @@
+/* CSS reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg,
+label {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+.container {
+  margin: 0 auto;
+  max-width: 76rem;
+  width: 90%;
+}
+/* header */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav div.range {
+  display: flex;
+  align-items: center;
+}
+.color-range {
+  position: relative;
+  z-index: 1;
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 0.6em;
+  width: 100%;
+  min-width: 200px;
+  outline: none;
+  margin: 0 7px;
+  transition: color 0.05s linear;
+  background: linear-gradient(to right, #1253f8, #27e4f1, #0f0, #f9f636, #f00);
+  -webkit-transition: color 0.05s linear;
+  -moz-transition: color 0.05s linear;
+  -ms-transition: color 0.05s linear;
+  -o-transition: color 0.05s linear;
+}
+.color-range:focus {
+  outline: none;
+}
+.color-range:active,
+.color-range:hover:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+.color-range::-moz-range-track {
+  appearance: none;
+  opacity: 0;
+  outline: none !important;
+}
+.color-range::-ms-track {
+  outline: none !important;
+  appearance: none;
+  opacity: 0;
+}
+.color-range::-webkit-slider-thumb {
+  height: 2em;
+  width: 2em;
+  border-radius: 2em;
+  appearance: none;
+  background: white;
+  cursor: pointer;
+  cursor: move;
+  cursor: grab;
+  cursor: -webkit-grab;
+  border: 0.4em solid currentColor;
+  transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out,
+    transform 0.1s ease-in-out;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.15);
+  -webkit-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  -moz-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  -ms-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  -o-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.color-range::-webkit-slider-thumb:active,
+.color-range::-webkit-slider-thumb:hover:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(0.975);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  border: 1.5em solid currentColor;
+  -webkit-transform: scale(0.975);
+  -moz-transform: scale(0.975);
+  -ms-transform: scale(0.975);
+  -o-transform: scale(0.975);
+}
+.color-range::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.color-range::-moz-range-thumb {
+  height: 2em;
+  width: 2em;
+  border-radius: 2em;
+  appearance: none;
+  background: white;
+  border: 0.4em solid currentColor;
+  cursor: pointer;
+  cursor: move;
+  cursor: grab;
+  cursor: -webkit-grab;
+  transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+  box-shadow: 0 1px 11px rgba(0, 0, 0, 0);
+  -webkit-transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+  -moz-transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+  -ms-transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+  -o-transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+.color-range::-moz-range-thumb:active,
+.color-range::-moz-range-thumb:hover:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(0.975);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.color-range::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+header nav button {
+  display: flex;
+  width: 122px;
+  height: max-content;
+  border: none;
+  background: #3d3d3d;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  width: 8.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  font-size: 0.95rem;
+}
+header nav button img {
+  margin-right: 0.5rem;
+}
+.map-section .container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.map-section .container .map {
+  width: 100%;
+}
+.map-section .container .map img {
+  max-width: 100%;
+}
+.map-section .container .menu {
+  padding: 1rem;
+}
+.map-section .container .menu form select {
+  width: 100%;
+  max-width: 22rem;
+  margin-bottom: 1rem;
+  background: #e6f2ff;
+  border-radius: 3px;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 0.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("img/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 16px;
+}
+.map-section .container .menu form select:focus {
+  outline: none;
+}
+.map-section .container .menu form select option {
+  font-size: 14px;
+  max-width: 100%;
+}
+
+.map-section .container .menu form label {
+  margin-bottom: 0.5rem;
+}
+.map-section .container .menu p {
+  line-height: 24px;
+  margin: 1rem 0;
+}
+.map-section .container .menu form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.map-section .container .menu form .btn-group button {
+  font-size: 11px;
+  color: #fff;
+  background-color: #d9d9d9;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.map-section .container .menu .btn-group {
+  width: 100%;
+  max-width: 22rem;
+  display: flex;
+  justify-content: space-between;
+}
+.map-section .container .menu .btn-group {
+  width: 100%;
+  max-width: 22rem;
+  display: flex;
+  justify-content: space-between;
+}
+.map-section .container .menu .btn-group .first {
+  width: 5.5rem;
+}
+@media screen and (max-width: 991px) {
+  .map-section .container {
+    grid-template-columns: 1fr;
+  }
+  .map-section .container .menu {
+    padding: 1rem 0;
+  }
+}

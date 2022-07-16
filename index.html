@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Map App</title>
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="/"><img src="img/logo.svg" alt="logo"></a>
+          </div>
+          <div class="range">
+            <span>0</span><input class="color-range" type="range" min="0" max="100" value="75"
+              title="Drag me, baby."><span>100</span>
+          </div>
+          <button>
+            <img src="img/arrow-icon.svg" alt="arrow-icon">
+            Log Out
+          </button>
+        </nav>
+      </div>
+    </header>
+    <section class="map-section">
+      <div class="container">
+        <div class="map">
+          <img src="img/Map.png" alt="map">
+        </div>
+        <div class="menu">
+          <form action="">
+            <div>
+              <label for="form-select">Maps</label>
+              <select id="form-select" class="form-select">
+                <option selected>Select map</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <div class="btn-group">
+                <button type="button" class="btn-add first">New map</button>
+                <button type="button" class="btn-edit first">Edit map</button>
+                <button type="button" class="btn-delete first">Delete map</button>
+              </div>
+            </div>
+            <div>
+              <label for="form-select">Locations</label>
+              <select id="form-select" class="form-select">
+                <option selected>Select location</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <div class="btn-group">
+                <button type="button" class="btn-add">New location</button>
+                <button type="button" class="btn-edit">Edit location</button>
+                <button type="button" class="btn-delete">Delete location</button>
+              </div>
+            </div>
+          </form>
+          <div class="info">
+            <p>1234 Main Street. Toronto, ON,</p>
+            <p>Score:&nbsp;&nbsp;&nbsp; <span class="score">89</span> &nbsp;&nbsp;&nbsp;<span class="delivery"
+                style="color: #EB0505;">Has
+                Delivery</span>
+            </p>
+            <p>Closing Time: <span class="time">11:00 PM</span></p>
+            <p>Google Score: <span class="google-score">11:00 PM</span></p>
+            <p>Appearance: <span class="appearance-value">8</span></p>
+            <p>Selection: <span class="selection-value">7</span></p>
+            <p>Notes go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut
+              labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo
+              consequat. Duis aute irure dolor in reprehenderit anim id est laborum</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    var colorRange = document.querySelector('.color-range')
+    var randomRange = Math.floor(100 * Math.random())
+
+    colorRange.addEventListener('input', function (e) {
+      var hue = ((this.value / 100) * 360).toFixed(0)
+      var hsl = "hsl(" + hue + ", 100%, 50%)"
+      var bgHsl = "hsl(" + hue + ", 100%, 95%)"
+      colorRange.style.color = hsl
+      colorChoice.style.color = hsl
+      document.body.style.background = bgHsl
+    });
+    colorRange.value = randomRange;
+    var event = new Event('input');
+    colorRange.dispatchEvent(event);
+  </script>
+</body>
+
+</html>
