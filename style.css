@@ -126,11 +126,11 @@ header nav div.range {
   opacity: 0;
 }
 .color-range::-webkit-slider-thumb {
-  height: 2em;
-  width: 2em;
-  border-radius: 2em;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 1.2em;
   appearance: none;
-  background: white;
+  background: currentColor;
   cursor: pointer;
   cursor: move;
   cursor: grab;
@@ -143,29 +143,26 @@ header nav div.range {
   -moz-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
   -ms-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
   -o-transition: border 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  -webkit-border-radius: 1.2em;
+  -moz-border-radius: 1.2em;
+  -ms-border-radius: 1.2em;
+  -o-border-radius: 1.2em;
 }
 .color-range::-webkit-slider-thumb:active,
 .color-range::-webkit-slider-thumb:hover:active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
-  transform: scale(0.975);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-  border: 1.5em solid currentColor;
-  -webkit-transform: scale(0.975);
-  -moz-transform: scale(0.975);
-  -ms-transform: scale(0.975);
-  -o-transform: scale(0.975);
 }
 .color-range::-webkit-slider-thumb:hover {
-  transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 .color-range::-moz-range-thumb {
-  height: 2em;
-  width: 2em;
+  height: 1.5em;
+  width: 1.5em;
   border-radius: 2em;
   appearance: none;
-  background: white;
+  background: currentColor;
   border: 0.4em solid currentColor;
   cursor: pointer;
   cursor: move;
