@@ -210,6 +210,9 @@ header nav button {
 header nav button img {
   margin-right: 0.5rem;
 }
+.map-section {
+  padding-bottom: 2rem;
+}
 .map-section .container {
   display: grid;
   grid-template-columns: 3fr 1fr;
