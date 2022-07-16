@@ -222,6 +222,8 @@ header nav button img {
 }
 .map-section .container .map img {
   max-width: 100%;
+  min-height: 100%;
+  width: 100%;
 }
 .map-section .container .menu {
   padding: 1rem;
